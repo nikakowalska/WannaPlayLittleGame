@@ -1,5 +1,9 @@
-import TaliaGlowna.PrzywódcyDrużyn;
+import Configuration.TeamLeadersBuilder;
+import TaliaGlowna.Elements;
+import TaliaGlowna.TeamLeader;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -7,15 +11,13 @@ public class Main {
 
        // WyborPrzywodcyImpl wyborPrzywodcy = new WyborPrzywodcyImpl();
 //wyborPrzywodcy.wyborPrzywodcy();
-        PrzywódcyDrużyn pd =new PrzywódcyDrużyn();
-        pd.add("Cat1");
-        pd.add("Cat2");
-        pd.add("Cat3");
-        pd.add("Cat4");
-        pd.add("Cat5");
-        pd.add("Cat6");
-             pd.toString();
+        TeamLeadersBuilder teamLeadersBuilder = new TeamLeadersBuilder();
+        List< TeamLeader > teamLeaders = teamLeadersBuilder.getTeamLeaderList();
+       teamLeaders.forEach(teamLeader -> System.out.println(teamLeader));
 
+//zrobic karty postaci i przeciwnikow w ten sam sposob
+        //postacie maja name, bron, klase, bron oddziielna klasa z nazwa broni z nazwa elementu, z ktorego jest bron
+        //karty przeciwnikow z name, punkty zycia, punkty zwyciestwa ktore dostaje gracz, gdzie punkty zwyciestwa powinny byc odkladane
         System.out.println("Podaj liczbę graczy");
         Scanner keyboard = new Scanner(System.in);
         int liczbaGraczy = keyboard.nextInt();
@@ -23,7 +25,7 @@ public class Main {
         for (int i = 0; i < liczbaGraczy; i++) {
 
             System.out.println("Wybierz przywódcę swojej drużyny!");
-            System.out.println(pd.toString());
+
 
           //  String przywodcaGracza = keyboard.nextLine();
             //if (przywodcyDruzyn.contains(przywodcaGracza)) {
