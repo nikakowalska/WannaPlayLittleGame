@@ -1,4 +1,0 @@
-public enum PunktyAkcji {
-    POINTS_USED ,ATAK, THREE_POINTS_ODRZUC, ONE_POINT_ACTION;
-
-}

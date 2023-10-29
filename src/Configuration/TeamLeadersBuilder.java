@@ -1,7 +1,7 @@
 package Configuration;
 
-import TaliaGlowna.Elements;
-import TaliaGlowna.TeamLeader;
+import Deck.Elements;
+import Deck.TeamLeader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,3 +21,4 @@ public class TeamLeadersBuilder {
 
     private List<TeamLeader> teamLeaderList;
 }
+
