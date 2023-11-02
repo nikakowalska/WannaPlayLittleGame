@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:CardDeckBuilder#getDeck();
+note right
+    klasa tworzy "stos kart standardowych"
+end note
+while (na liście "dla ręki" jest 5 kart?) is (false)
+    repeat
+        repeat
+            :wylosuj liczbę - index karty;
+        repeat while (przekracza ilość kart na "stosie kart standardowych"?) is (true) not (false)
+    repeat while (karta z indexem znajduje się "na ręce"?) is (true) not (false)
+
+    :pobierz kartę ze "stos kart standardowych" o wylosowanym indexie;
+    :umieść kartę na liście "dla ręki";
+endwhile (true)
+    :User#setHand(lista kard "dla ręki");
+
+stop
+
+@enduml
