@@ -7,7 +7,19 @@ public class Player1 {
 
     private String playerOneLeader;
     public int gamePoints;
-    public static List<Integer> p1list;
+    //metoda wspoldzielona przez wszystkie obiekty stworzone przez klase, nie robi sie tego. pole static moze byc komunikatem, stała
+    public  List<Integer> p1list;
+    private int scoreValue;
+
+    public int getScoreValue() {
+        return scoreValue;
+    }
+
+    public void setScoreValue(final int scoreValue) {
+        int currentValue = this.scoreValue;
+        this.scoreValue = currentValue+scoreValue;
+        //ctrlw zaznacza
+    }
 
     public Player1(final int gamePoints) {
 
@@ -15,7 +27,7 @@ public class Player1 {
 
     }
 
-    public static List<Integer> getP1list() {
+    public List<Integer> getP1list() {
         return p1list;
     }
 
@@ -26,19 +38,6 @@ public class Player1 {
 
     private void setGamePoints(final int gamePoints) {
        this.gamePoints = gamePoints;
-    }
-
-
-//    public static void main(String[] args) {
-
-    public void addP1points() {
-        p1list.add(gamePoints);
-        int suma = 0;
-        for (int points : p1list) {
-            suma += points;
-        }
-
-        System.out.println("player1 achieved " + suma + "points");
     }
 
 }
