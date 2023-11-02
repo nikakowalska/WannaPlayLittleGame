@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class TeamLister {
+    - String name
+    - String id
+    - boolean extraThrow
+    - Elements elements
+}
+
+class Monster {
+    - String name
+    - String id
+    - int attackPlayer
+    - int defeated
+}
+
+class StandardCard {
+    - String name
+    - String id
+    - boolean onGraveyard
+    - boolean hero
+    - boolean item
+    - int actionPoints
+    - List<StandardCard>
+}
+
+note right of StandardCard::item
+    Jeśli występuje pole 'hero',
+    to czy to pole jest potrzebne
+end note
+
+class Player {
+    - TeamLister teamLister
+    - List<StandardCard> hand
+    - List<StandardCard> table
+}
+
+enum Elements {
+    WATER
+    FIRE
+}
+
+TeamLister - Elements
+Player -up- TeamLister
+Player - StandardCard
+
+@enduml
