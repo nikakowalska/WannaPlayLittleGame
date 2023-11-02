@@ -3,7 +3,7 @@ package Deck;
 public enum Weapon {
 
 
-    SABER(7, Elements.FIRE), ORB(7, Elements.WATER), BOW(7, Elements.LIGHTNING), DAGGER(7, Elements.WIND), LIRA(7, Elements.WIND), SWORD(7, Elements.WATER);
+    SABER(7, Elements.NONE), ORB(7, Elements.NONE), BOW(7, Elements.NONE), DAGGER(7, Elements.NONE), LIRA(7, Elements.NONE), SWORD(7, Elements.NONE);
 
     private final int weaponAttackValue;
     public final Elements elementsValue;

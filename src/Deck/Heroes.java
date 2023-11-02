@@ -33,10 +33,8 @@ public class Heroes {
         return heroFightStyle;
     }
 
-    private void setHeroFightStyle(final FightStyle heroFightStyle) {
-        this.heroFightStyle = heroFightStyle;
-
-
+    public void setHeroFightStyle(final FightStyle heroFightStyle) {
+        this.heroFightStyle = heroFightStyle;  ;
     }
 
     @Override

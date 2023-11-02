@@ -8,19 +8,19 @@ public enum FightStyle {
     //sentinel plus 5 with sword
     //thief plus 5 with dagger
     //bard plus 5 with lira
-    private final int heroFightStyle;
 
+    private final int heroFightStyle;
     FightStyle(final int f) {
         this.heroFightStyle = f;
-
-        private int getHeroFightStyle () {
+    }
+        private int getHeroFightStyle() {
             return heroFightStyle;
         }
-        public boolean warriorWithSaber() { return; this==WARRIOR}
-        public boolean wizardWithOrb() { return; this==WIZARD}
-        public boolean hunterWithBow() { return; this==HUNTER}
-        public boolean sentinelWithSword() { return; this==SENTINEL}
-        public boolean thiefWithDagger() { return; this==THIEF}
-        public boolean bardWithLira() { return; this==BARD}
+        public boolean warriorWithSaber() { return this==WARRIOR;}
+        public boolean wizardWithOrb() { return this==WIZARD;}
+        public boolean hunterWithBow() { return this==HUNTER;}
+        public boolean sentinelWithSword() { return this==SENTINEL;}
+        public boolean thiefWithDagger() { return this==THIEF;}
+        public boolean bardWithLira() { return this==BARD;}
     }
-}
+
