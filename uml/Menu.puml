@@ -1,0 +1,42 @@
+'menu dispatcher flow
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:menu#dispatcher();
+repeat
+    :User choose one option from menu;
+repeat while (options is correct?\nis one of the menu letters) is (false)
+-> true;
+
+while (end game?) is (false)
+    :run the next step\nchoosen by player;
+endwhile (true)
+    :end game;
+
+stop
+
+@enduml
+
+'choose TeamLeader flow
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:menu#dispatcher();
+:User choose select TeamLeader;
+:teamLeadersBuilder.getTeamLeaderList();
+:menu#showTeamLeadersMenu(List<TeamLeader>);
+
+repeat
+    :User choose one option from menu;
+repeat while (options is correct?\nis one of the menu letters/numbers) is (false)
+-> true;
+
+:teamLeaders.get(w-1)\nreturn TeamLeader object;
+:player#setTeamLeader(TeamLeader);
+
+stop
+
+@enduml
+
