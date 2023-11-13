@@ -1,11 +1,13 @@
 package Deck;
 
 public class TeamLeader {
+    private String id;
     public boolean extraThrow;
     private String name;
     private Elements boostElement;
 
-    public TeamLeader(final String name, final Elements boostElement, final boolean extraThrow) {
+    public TeamLeader(final String id, final String name, final Elements boostElement, final boolean extraThrow) {
+        this.id=id;
         this.name = name;
         this.boostElement = boostElement;
         this.extraThrow = extraThrow;
@@ -20,7 +22,7 @@ public class TeamLeader {
     }
 
 
-    private boolean isExtraThrow() {
+    public boolean isExtraThrow() {
         return extraThrow;
     }
 
@@ -28,16 +30,23 @@ public class TeamLeader {
         this.extraThrow = extraThrow;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(final String id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "TeamLeader{" +
-                "name='" + name + '\'' +
-                ", boostElement=" + boostElement +
+                "id='" + id + '\'' +
                 ", extraThrow=" + extraThrow +
+                ", name='" + name + '\'' +
+                ", boostElement=" + boostElement +
                 '}';
     }
-
-
 }
 
 

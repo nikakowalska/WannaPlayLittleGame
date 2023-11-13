@@ -34,6 +34,7 @@ class Player {
     - TeamLister teamLister
     - List<StandardCard> hand
     - List<StandardCard> table
+    - int scorePoints
 }
 
 enum Elements {
