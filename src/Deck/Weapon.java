@@ -13,13 +13,14 @@ public enum Weapon {
 
 
     }
-
+//feature ma miec nazwe funkcjonalnosci
     private int getWeaponAttackValue() {
         return weaponAttackValue;
     }
 
 
-    public void withSword() {
+    public int comboAttack() {
+        return weaponAttackValue + elementsValue.getElementValue();
 
 
     }
