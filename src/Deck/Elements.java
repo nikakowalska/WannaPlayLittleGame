@@ -6,7 +6,7 @@ public enum Elements {
     Elements(final int i) {
         this.elementValue = i;
     }
-    private int getElementValue() {
+    public int getElementValue() {
         return elementValue;
     }
 

@@ -4,12 +4,25 @@ package Deck;
 import java.util.List;
 
 public class Player1 {
-
-    private String playerOneLeader;
-    public int gamePoints;
-    //metoda wspoldzielona przez wszystkie obiekty stworzone przez klase, nie robi sie tego. pole static moze byc komunikatem, stała
-    public  List<Integer> p1list;
+    private TeamLeader teamLeader;
+    private List<StandardCard> hand;
+    private List<StandardCard> table;
     private int scoreValue;
+
+//ma do wyboru jedna z 2 akcji dobierz, zaatakuj i wyloz na stol. w kazdej rundzie(licznik runda 1) decydowac ktora akcje chce zrobic,
+    //losowo dobierz karte, wyloz karte na stol, gdy mam wystarczajaco punktow akcji atakuje przypadkowego bosa
+
+
+    public TeamLeader getTeamLeader() {
+        return teamLeader;
+    }
+
+    public void setTeamLeader(final TeamLeader teamLeader) {
+        this.teamLeader = teamLeader;
+    }
+
+    //metoda wspoldzielona przez wszystkie obiekty stworzone przez klase, nie robi sie tego. pole static moze byc komunikatem, stała
+
 
     public int getScoreValue() {
         return scoreValue;
@@ -21,25 +34,29 @@ public class Player1 {
         //ctrlw zaznacza
     }
 
-    public Player1(final int gamePoints) {
-
-        this.gamePoints = gamePoints;
-
-    }
-
-    public List<Integer> getP1list() {
-        return p1list;
+    public Player1(final TeamLeader teamLeader, final List<StandardCard> hand, final List<StandardCard> table, final int scoreValue) {
+        this.teamLeader = teamLeader;
+        this.hand = hand;
+        this.table = table;
+        this.scoreValue = scoreValue;
     }
 
 
-    private int getGamePoints() {
-        return gamePoints;
+    public List<StandardCard> getTable() {
+        return table;
     }
 
-    private void setGamePoints(final int gamePoints) {
-       this.gamePoints = gamePoints;
+    public void setTable(final List<StandardCard> table) {
+        this.table = table;
     }
 
+    public List<StandardCard> getHand() {
+        return hand;
+    }
+
+    public void setHand(final List<StandardCard> hand) {
+        this.hand = hand;
+    }
 }
 
 

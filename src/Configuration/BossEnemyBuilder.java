@@ -16,12 +16,12 @@ public class BossEnemyBuilder {
 
     public BossEnemyBuilder() {
         this.BossEnemyList = new ArrayList<>();
-        BossEnemyList.add(new BossEnemy("NewSeriesOnNetflix", 13));
-        BossEnemyList.add(new BossEnemy("Laundry", 14));
-        BossEnemyList.add(new BossEnemy("AnotherOneBiteOfDust", 15));
-        BossEnemyList.add(new BossEnemy("SleepingCatOnYourLap", 20));
-        BossEnemyList.add(new BossEnemy("Nap", 23));
-        BossEnemyList.add(new BossEnemy("90'HitsList", 27));
+        BossEnemyList.add(new BossEnemy("boss1","NewSeriesOnNetflix",5, 13));
+        BossEnemyList.add(new BossEnemy("boss2","Laundry",6, 14));
+        BossEnemyList.add(new BossEnemy("boss3","AnotherOneBiteOfDust",7, 15));
+        BossEnemyList.add(new BossEnemy("boss4","SleepingCatOnYourLap",8, 20));
+        BossEnemyList.add(new BossEnemy("boss5","Nap",9, 23));
+        BossEnemyList.add(new BossEnemy("boss6","90'HitsList",10, 27));
 
     }
 }

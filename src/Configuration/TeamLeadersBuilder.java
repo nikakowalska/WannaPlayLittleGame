@@ -15,12 +15,12 @@ public class TeamLeadersBuilder {
 
     public TeamLeadersBuilder() {
         this.teamLeaderList = new ArrayList<>();
-        teamLeaderList.add(new TeamLeader("HardCandy", Elements.FIRE, false));
-        teamLeaderList.add(new TeamLeader("ChilliChips", Elements.LIGHTNING, false));
-        teamLeaderList.add(new TeamLeader("Marshmallow", Elements.WIND, false));
-        teamLeaderList.add(new TeamLeader("HotSausage", Elements.FIRE, false));
-        teamLeaderList.add(new TeamLeader("Sweet&Sour", Elements.WATER, false));
-        teamLeaderList.add(new TeamLeader("YourMomsDinner", Elements.FIRE, false));
+        teamLeaderList.add(new TeamLeader("lead1","HardCandy", Elements.FIRE, false));
+        teamLeaderList.add(new TeamLeader("lead2","ChilliChips", Elements.LIGHTNING, false));
+        teamLeaderList.add(new TeamLeader("lead3","Marshmallow", Elements.WIND, false));
+        teamLeaderList.add(new TeamLeader("lead4","HotSausage", Elements.FIRE, false));
+        teamLeaderList.add(new TeamLeader("lead5","Sweet&Sour", Elements.WATER, false));
+        teamLeaderList.add(new TeamLeader("lead6","YourMomsDinner", Elements.FIRE, false));
 
     }
 }
