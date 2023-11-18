@@ -3,7 +3,7 @@ package Deck;
 import java.util.List;
 
 public class StandardCard {
-   private String name;
+    private String name;
     private String id;
     private boolean onGraveyard;
     private boolean hero;
@@ -12,9 +12,9 @@ public class StandardCard {
     private Weapon weaponAttack;
 
     private FightStyle heroFightStyle;
-    private List<StandardCard>standardCardList;
+    private List<StandardCard> standardCardList;
 
-    public StandardCard(final String name, final String id, final boolean onGraveyard, final boolean hero, final boolean item, final int actionPoints,final Weapon weaponAttack, final FightStyle heroFightStyle, List<StandardCard>standardCardList) {
+    public StandardCard(final String name, final String id, final boolean onGraveyard, final boolean hero, final boolean item, final int actionPoints, final Weapon weaponAttack, final FightStyle heroFightStyle) {
         this.name = name;
         this.id = id;
         this.onGraveyard = onGraveyard;
@@ -23,8 +23,7 @@ public class StandardCard {
         this.actionPoints = actionPoints;
         this.weaponAttack = weaponAttack;
         this.heroFightStyle = heroFightStyle;
-        this.standardCardList = standardCardList;
-    }
+           }
 
     public String getName() {
         return name;
@@ -74,13 +73,7 @@ public class StandardCard {
         this.actionPoints = actionPoints;
     }
 
-    public List<StandardCard> getStandardCardList() {
-        return standardCardList;
-    }
 
-    public void setStandardCardList(final List<StandardCard> standardCardList) {
-        this.standardCardList = standardCardList;
-    }
 
     public Weapon getWeaponAttack() {
         return weaponAttack;
@@ -109,7 +102,6 @@ public class StandardCard {
                 ", actionPoints=" + actionPoints +
                 ", weaponAttack=" + weaponAttack +
                 ", heroFightStyle=" + heroFightStyle +
-                ", standardCardList=" + standardCardList +
                 '}';
     }
 }

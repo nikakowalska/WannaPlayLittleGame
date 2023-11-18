@@ -23,5 +23,12 @@ public class TeamLeadersBuilder {
         teamLeaderList.add(new TeamLeader("lead6","YourMomsDinner", Elements.FIRE, false));
 
     }
+
+    @Override
+    public String toString() {
+        return "TeamLeadersBuilder{" +
+                "teamLeaderList=" + teamLeaderList +
+                '}';
+    }
 }
 
