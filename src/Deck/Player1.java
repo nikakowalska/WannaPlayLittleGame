@@ -21,7 +21,7 @@ public class Player1 {
         this.teamLeader = teamLeader;
     }
 
-    //metoda wspoldzielona przez wszystkie obiekty stworzone przez klase, nie robi sie tego. pole static moze byc komunikatem, stała
+    //static metoda wspoldzielona przez wszystkie obiekty stworzone przez klase, nie robi sie tego. pole static moze byc komunikatem, stała
 
 
     public int getScoreValue() {

@@ -1,4 +1,5 @@
 import Configuration.BossEnemyBuilder;
+import Configuration.CardDeckBuilder;
 import Configuration.StandardCardBuilder;
 import Configuration.TeamLeadersBuilder;
 import Deck.BossEnemy;

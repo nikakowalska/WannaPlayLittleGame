@@ -24,4 +24,11 @@ public class BossEnemyBuilder {
         BossEnemyList.add(new BossEnemy("boss6","90'HitsList",10, 27));
 
     }
+
+    @Override
+    public String toString() {
+        return "BossEnemyBuilder{" +
+                "BossEnemyList=" + BossEnemyList +
+                '}';
+    }
 }
