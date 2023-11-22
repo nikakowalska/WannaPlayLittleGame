@@ -21,11 +21,14 @@ teamLeadMenu.teamLeadMenu();
             System.out.println("Which Leader is Your chosen One?");
             PlayerBuilder playerBuilder = new PlayerBuilder();
             playerBuilder.getTL();
-            playerBuilder.showHand();
+            CardDeckBuilder cardDeckBuilder = new CardDeckBuilder();
+            Player1 player1 = new Player1(playerBuilder.getTL(), cardDeckBuilder.getDeck(), null, 0);
+            playerBuilder.showTL();
+            //playerBuilder.showHand();
 return false;
     } else if (playerChoose.equals("C")) {
-            PlayerBuilder playerBuilder = new PlayerBuilder();
-            playerBuilder.showHand();
+            CardDeckBuilder cardDeckBuilder = new CardDeckBuilder();
+            System.out.println(cardDeckBuilder.getDeck().toString());
     }   return false;
 
 }}
