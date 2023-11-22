@@ -17,7 +17,8 @@ public class Main {
 
         //run wykorzystuje sie w aplikacjach wielowatkowych - zobacz watki
 
-        //loot:
+        //loot:a
+        
         for (; ; ) {
             if (runner.run()) {
                 //    continue;//dobre by wyjsc z duzego zagniezdzenia ifow, stary kod i ma zaszlosci, zrobili spaghetti
