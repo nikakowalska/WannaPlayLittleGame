@@ -11,11 +11,13 @@ public class TeamLeadMenu {
 
     public void teamLeadMenu() {
         TeamLeadersBuilder teamLeadersBuilder = new TeamLeadersBuilder();
-       List<TeamLeader> teamLeaders = teamLeadersBuilder.getTeamLeaderList();
+        List<TeamLeader> teamLeaders = teamLeadersBuilder.getTeamLeaderList();
         int i = 1;
-        while  (i <teamLeaders.size()+1) {
-                    System.out.println( i +" - " + teamLeaders.get(i-1).getName());
-        i++;}
-    }}
+        while (i < teamLeaders.size() + 1) {
+            System.out.println(i + " - " + teamLeaders.get(i - 1).getName());
+            i++;
+        }
+    }
+}
 
 //player1.setTeamLeader(teamLeaders.get(w-1));

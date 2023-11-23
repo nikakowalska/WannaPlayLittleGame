@@ -14,8 +14,8 @@ public class StandardCard {
     private FightStyle heroFightStyle;
     private List<StandardCard> standardCardList;
 
-    public StandardCard(final String name, final String id, final boolean onGraveyard, final boolean hero, final boolean item, final int actionPoints, final Weapon weaponAttack, final FightStyle heroFightStyle) {
-        this.name = name;
+    public StandardCard(final String chochlik, final String id, final boolean onGraveyard, final boolean hero, final boolean item, final int actionPoints, final Weapon weaponAttack, final FightStyle heroFightStyle) {
+        this.name = chochlik;
         this.id = id;
         this.onGraveyard = onGraveyard;
         this.hero = hero;
