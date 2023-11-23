@@ -12,18 +12,18 @@ public class PlayerBuilder {
 
     public TeamLeader getTL() {
 
-
+//tu przekazac scanner
         TeamLeadersBuilder teamLeadersBuilder = new TeamLeadersBuilder();
         List<TeamLeader> teamLeaders = teamLeadersBuilder.getTeamLeaderList();
         Scanner scanner = new Scanner(System.in);
-        int a = Integer.parseInt(scanner.nextLine());
-        scanner.close();
-        return teamLeaders.get(a - 1);
+        String playerChoose = scanner.nextLine();
+
+        return teamLeaders.get(Integer.parseInt(playerChoose) - 1);
     }
 
     CardDeckBuilder cardDeckBuilder = new CardDeckBuilder();
 
-    StandardCardBuilder standardCardBuilder = new StandardCardBuilder();
+    StandardCardConf standardCardBuilder = new StandardCardConf();
     List<StandardCard> standardCards = standardCardBuilder.getStandardCardList();
     BossEnemyBuilder enemyBuilder = new BossEnemyBuilder();
     List<BossEnemy> bossEnemies = enemyBuilder.getBossEnemyList();
