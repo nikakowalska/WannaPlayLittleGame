@@ -1,11 +1,15 @@
 package Deck;
 
 
+import Adnotations.MinimumListSize;
+
 import java.util.List;
 
 public class Player1 {
     private TeamLeader teamLeader;
+    @MinimumListSize(min = 5)
     private List<StandardCard> hand;
+    @MinimumListSize(min = 1)
     private List<StandardCard> table;
     private int scoreValue;
 
