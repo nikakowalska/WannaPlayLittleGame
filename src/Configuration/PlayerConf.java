@@ -8,26 +8,28 @@ import Deck.TeamLeader;
 import java.util.List;
 import java.util.Scanner;
 
-public class PlayerBuilder {
+public class PlayerConf {
+    private final Scanner scanner;
+
+    public PlayerConf(final Scanner scanner) {
+        this.scanner = scanner;
+    }
 
     public TeamLeader getTL() {
 
-//tu przekazac scanner
-        TeamLeadersBuilder teamLeadersBuilder = new TeamLeadersBuilder();
-        List<TeamLeader> teamLeaders = teamLeadersBuilder.getTeamLeaderList();
-        Scanner scanner = new Scanner(System.in);
+        TeamLeadersConf teamLeadersConf = new TeamLeadersConf();
+        List<TeamLeader> teamLeaders = teamLeadersConf.getTeamLeaderList();
         String playerChoose = scanner.nextLine();
-
         return teamLeaders.get(Integer.parseInt(playerChoose) - 1);
     }
 
-    CardDeckBuilder cardDeckBuilder = new CardDeckBuilder();
+    CardDeckConf cardDeckConf = new CardDeckConf();
 
     StandardCardConf standardCardBuilder = new StandardCardConf();
     List<StandardCard> standardCards = standardCardBuilder.getStandardCardList();
-    BossEnemyBuilder enemyBuilder = new BossEnemyBuilder();
+    BossEnemyConf enemyBuilder = new BossEnemyConf();
     List<BossEnemy> bossEnemies = enemyBuilder.getBossEnemyList();
-    Player1 player1 = new Player1(getTL(), cardDeckBuilder.getDeck(), null, 0);
+    Player1 player1 = new Player1(getTL(), cardDeckConf.getDeck(), null, 0);
 
     public void showTL() {
         System.out.println(player1.getTeamLeader().toString());

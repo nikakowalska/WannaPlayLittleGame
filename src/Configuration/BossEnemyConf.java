@@ -1,20 +1,18 @@
 package Configuration;
 
 import Deck.BossEnemy;
-import Deck.Elements;
-import Deck.TeamLeader;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BossEnemyBuilder {
+public class BossEnemyConf {
     private List<BossEnemy> BossEnemyList;
 
     public List<BossEnemy> getBossEnemyList() {
         return BossEnemyList;
     }
 
-    public BossEnemyBuilder() {
+    public BossEnemyConf() {
         this.BossEnemyList = new ArrayList<>();
         BossEnemyList.add(new BossEnemy("boss1", "NewSeriesOnNetflix", 5, 13));
         BossEnemyList.add(new BossEnemy("boss2", "Laundry", 6, 14));

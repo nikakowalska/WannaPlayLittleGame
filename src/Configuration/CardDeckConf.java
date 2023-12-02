@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class CardDeckBuilder {
+public class CardDeckConf {
 
     public List<StandardCard> getDeck() {
         List<StandardCard> tableCards = new StandardCardConf().getStandardCardList();

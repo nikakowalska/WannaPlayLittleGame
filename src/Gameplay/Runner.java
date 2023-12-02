@@ -1,23 +1,25 @@
 package Gameplay;
 
 import Configuration.*;
-import Deck.BossEnemy;
 import Deck.Player1;
-import Deck.StandardCard;
-import Deck.TeamLeader;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Runner {
-private Scanner scanner;
-private Menu menu;
+    private Scanner scanner;
+    private Menu menu;
+    private PlayerConf playerConf;
+
+    private TableConf tableConf;
+
     public Runner(final Scanner scanner) {
         this.scanner = scanner;
         this.menu = new Menu(this.scanner);
-     //   this.klasy builder
+        this.playerConf = new PlayerConf(this.scanner);
+        this.tableConf = new TableConf(this.scanner);
+
         //zrobic mind mape jak lacza sie klasy
-        //zmienic koncowke conf
+
     }
 
     public boolean run() {
@@ -29,16 +31,16 @@ private Menu menu;
             TeamLeadMenu teamLeadMenu = new TeamLeadMenu();
             teamLeadMenu.teamLeadMenu();
             System.out.println("Which Leader is Your chosen One?");
-            PlayerBuilder playerBuilder = new PlayerBuilder();
-            playerBuilder.getTL();
-            CardDeckBuilder cardDeckBuilder = new CardDeckBuilder();
-            Player1 player1 = new Player1(playerBuilder.getTL(), cardDeckBuilder.getDeck(), null, 0);
-            playerBuilder.showTL();
+            PlayerConf playerConf = new PlayerConf(scanner);
+            playerConf.getTL();
+            CardDeckConf cardDeckConf = new CardDeckConf();
+            Player1 player1 = new Player1(playerConf.getTL(), cardDeckConf.getDeck(), null, 0);
+            playerConf.showTL();
             //playerBuilder.showHand();
             return false;
         } else if (playerChoose.equals("C")) {
-            CardDeckBuilder cardDeckBuilder = new CardDeckBuilder();
-            System.out.println(cardDeckBuilder.getDeck().toString());
+            CardDeckConf cardDeckConf = new CardDeckConf();
+            System.out.println(cardDeckConf.getDeck().toString());
         }
         return false;
 

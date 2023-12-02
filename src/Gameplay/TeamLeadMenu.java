@@ -1,17 +1,15 @@
 package Gameplay;
 
-import Configuration.TeamLeadersBuilder;
+import Configuration.TeamLeadersConf;
 import Deck.TeamLeader;
 
 import java.util.List;
-import java.util.Scanner;
 
 public class TeamLeadMenu {
-    private String a;
 
     public void teamLeadMenu() {
-        TeamLeadersBuilder teamLeadersBuilder = new TeamLeadersBuilder();
-        List<TeamLeader> teamLeaders = teamLeadersBuilder.getTeamLeaderList();
+        TeamLeadersConf teamLeadersConf = new TeamLeadersConf();
+        List<TeamLeader> teamLeaders = teamLeadersConf.getTeamLeaderList();
         int i = 1;
         while (i < teamLeaders.size() + 1) {
             System.out.println(i + " - " + teamLeaders.get(i - 1).getName());
@@ -20,4 +18,4 @@ public class TeamLeadMenu {
     }
 }
 
-//player1.setTeamLeader(teamLeaders.get(w-1));
+

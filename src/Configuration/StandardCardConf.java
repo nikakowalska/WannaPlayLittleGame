@@ -23,8 +23,8 @@ public class StandardCardConf {
         standardCardList.add(new StandardCard("FlatWhite", "card4", false, true, false, 5, Weapon.ORB, FightStyle.WIZARD));
         standardCardList.add(new StandardCard("Espresso", "card5", false, true, false, 5, Weapon.ORB, FightStyle.WIZARD));
         standardCardList.add(new StandardCard("CoffeeWith%", "card6", false, true, false, 5, Weapon.ORB, FightStyle.WIZARD));
-        standardCardList.add(new StandardCard("2", "card7", false, true, false, 5, Weapon.ORB, FightStyle.WIZARD));
-        StandardCard sc = new StandardCardBuilder().withName("cos").withId("23").build();
+        standardCardList.add(new StandardCard("Attack boosting snacks", "card7", false, false, false, 5, null, null));
+        StandardCard sc = new StandardCardBuilder().withName("Hold my beer").withId("card8").withGraveyard(false).isHero(false).withItem(false).withActionPoints(10).build();
     }
 
     @Override
