@@ -30,4 +30,30 @@ public class StandardCardBuilder {
         this.id = id;
         return this;
     }
+
+    public StandardCardBuilder withGraveyard(boolean onGraveyard) {
+        this.onGraveyard = onGraveyard;
+        return this;
+    }
+
+    public StandardCardBuilder isHero(boolean hero) {
+        this.hero = hero;
+        return this;
+    }
+
+    public StandardCardBuilder withItem(boolean item) {
+        this.item = item;
+        return this;
+    }
+
+    public StandardCardBuilder withActionPoints(int actionPoints) {
+        this.id = id;
+        return this;
+    } public StandardCardBuilder withWeaponAttack(Weapon weaponAttack) {
+        this.weaponAttack = weaponAttack;
+        return this;
+    } public StandardCardBuilder withFightStyle(FightStyle heroFightStyle) {
+        this.heroFightStyle = heroFightStyle;
+        return this;
+    }
 }

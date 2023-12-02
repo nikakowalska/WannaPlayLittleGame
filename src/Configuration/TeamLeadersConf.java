@@ -6,14 +6,14 @@ import Deck.TeamLeader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TeamLeadersBuilder {
+public class TeamLeadersConf {
     private List<TeamLeader> teamLeaderList;
 
     public List<TeamLeader> getTeamLeaderList() {
         return teamLeaderList;
     }
 
-    public TeamLeadersBuilder() {
+    public TeamLeadersConf() {
         this.teamLeaderList = new ArrayList<>();
         teamLeaderList.add(new TeamLeader("lead1", "HardCandy", Elements.FIRE, false));
         teamLeaderList.add(new TeamLeader("lead2", "ChilliChips", Elements.LIGHTNING, false));
