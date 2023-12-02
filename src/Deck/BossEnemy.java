@@ -7,14 +7,6 @@ public class BossEnemy {
     private int attackPlayer;
     private int defeated;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(final String name) {
-        this.name = name;
-    }
-
 
     public BossEnemy(final String id, final String name, final int attackPlayer, final int defeated) {
         this.id = id;
@@ -22,6 +14,14 @@ public class BossEnemy {
         this.defeated = defeated;
         this.name = name;
 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(final String name) {
+        this.name = name;
     }
 
     public String getId() {
