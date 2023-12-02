@@ -49,10 +49,14 @@ public class StandardCardBuilder {
     public StandardCardBuilder withActionPoints(int actionPoints) {
         this.id = id;
         return this;
-    } public StandardCardBuilder withWeaponAttack(Weapon weaponAttack) {
+    }
+
+    public StandardCardBuilder withWeaponAttack(Weapon weaponAttack) {
         this.weaponAttack = weaponAttack;
         return this;
-    } public StandardCardBuilder withFightStyle(FightStyle heroFightStyle) {
+    }
+
+    public StandardCardBuilder withFightStyle(FightStyle heroFightStyle) {
         this.heroFightStyle = heroFightStyle;
         return this;
     }
