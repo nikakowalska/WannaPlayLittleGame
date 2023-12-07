@@ -1,0 +1,73 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+title Read TeamLeaders form CSV file
+
+if (Open *.scv file without error?) then (yes)
+    :skip reading first line;
+    note left
+        line with string:
+        "id;name;..."
+    end note
+
+    while (read one line?) is (true)
+        :split data from line by delimiter;
+        note left
+            the delimiter can be:
+            dot, semicolon, comma, ...
+        end note
+        :use TeamLeaderBuilder to create object TeamLeader;
+        note left
+            design pattern Builder
+        end note
+        :put new object on the list;
+    endwhile(false)
+    if (TeamLeadersList.size() < 2) then (yes)
+        :add default 2 team leaders;
+    else (no)
+    endif
+else (no)
+    :load default 2 team leaders;
+endif
+
+stop
+
+@enduml
+
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+title Read cards from CSV file
+
+if (Open *.scv file without error?) then (yes)
+    :skip reading first line;
+    note left
+        line with string:
+        "id;name;..."
+    end note
+
+    while (read one line?) is (true)
+        :split data from line by delimiter;
+        note left
+            the delimiter can be:
+            dot, semicolon, comma, ...
+        end note
+        :use Builder class to create object;
+        note left
+            design pattern Builder
+        end note
+        :put new object on the list;
+    endwhile(false)
+    if (CardList.size() < expectedMinSize) then (yes)
+        :add default list;
+    else (no)
+    endif
+else (no)
+    :load default list with minimum size;
+endif
+
+stop
+
+@enduml

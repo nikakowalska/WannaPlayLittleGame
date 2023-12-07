@@ -1,0 +1,140 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+title player's turn
+
+start
+:set action points to 3;
+while (action points > 0) is (true)
+    :show menu with available options;
+    :choose action from menu;
+    :subtract points costs for action;
+endwhile (false)
+    :end turn;
+stop
+
+@enduml
+
+@startuml
+'https://plantuml.com/class-diagram
+title how user can play - propose class
+
+interface ActionToPick {
+    + execute(Map<CardTypes, List<Card>>)
+}
+
+class PlayerActions {
+    - Player player
+    - Map<CardTypes, List<Card>> availableCards
+    - Map<UserActions, ActionToPick> actionsMap
+}
+
+enum UserActions {
+    DRAW_CARD(1)
+    REPLACE_HAND(3)
+}
+
+enum CardTypes {
+    BASIC
+    MAIN_DECK
+    GRAVEYARD
+}
+
+@enduml
+
+@startuml
+'https://plantuml.com/activity-diagram-beta
+title one point cost
+
+start
+:get main deck from availableCards;
+#pink:(A)
+note left
+    Hint to get index
+    ====
+    card with index, can already be
+    on the player's hand, the opponent's
+    hand or on a graveyard
+end note
+while (index is valid?) is (true)
+    :put card to player hand;
+endwhile (false)
+    :end;
+stop
+
+start
+:get hand deck;
+while (handDeckList > 0?) is (true)
+    while (index of hand card is valid?) is (true)
+        :put card to active cards list (on table);
+        :roll 2 dices;
+        if (dice score > can execute action) then (true)
+        :execute actions on card;
+        note left
+            this can be done
+            in another task
+        end note
+        else (false)
+        endif
+        :end;
+        stop
+    endwhile (false)
+endwhile (false)
+    :end;
+stop
+
+start
+:get player's deck on table (active deck);
+while (active deck > 0?) is (true)
+    :show menu with active deck;
+    :choose card;
+    while (index of hand card is valid?) is (true)
+        :roll 2 dices;
+        if (dice score > can execute action) then (true)
+        :execute actions on card;
+        note left
+            this can be done
+            in another task
+        end note
+        else (false)
+        endif
+        :end;
+        stop
+    endwhile (false)
+endwhile (false)
+    :end;
+stop
+
+@enduml
+
+
+@startuml
+'https://plantuml.com/activity-diagram-beta
+title two points cost
+
+start
+:show menu with monsters;
+note left
+    statistics, name,
+    when can be attacked,
+    effects of the attack
+end note
+while (select monster is correct?) is (true)
+    if (attack conditions meet?) then (true)
+        :roll 2 dices;
+        if (roll score >= defeat monster) then (true)
+            :monster card goes to player
+             list of defeated monsters;
+            :random put new monster;
+        (false) elseif (roll score <= monster attack) then (true)
+            :discard one card form hand;
+        else (false)
+        endif
+        :end;
+        stop
+    else (false)
+    endif
+endwhile (false)
+    :end;
+stop
+
+@enduml

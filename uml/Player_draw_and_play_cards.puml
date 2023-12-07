@@ -1,5 +1,6 @@
 @startuml
 'https://plantuml.com/activity-diagram-beta
+title get cards on hand
 
 start
 :CardDeckBuilder#getDeck();
@@ -17,6 +18,28 @@ while (na liście "dla ręki" jest 5 kart?) is (false)
     :umieść kartę na liście "dla ręki";
 endwhile (true)
     :User#setHand(lista kard "dla ręki");
+
+stop
+
+@enduml
+
+@startuml
+'https://plantuml.com/activity-diagram-beta
+title put on table enemies cards to beat
+
+start
+:get enemies cards list;
+while (enemyOnTableLies < 3) is (false)
+    repeat
+        repeat
+            :rangom get index;
+        repeat while (index will produce an error IndexOutOfBound?) is (true) not (false)
+    repeat while (card with index already on table?) is (true) not (false)
+
+    :get card on index;
+    :put card on toTableList;
+endwhile (true)
+    :put toTableList to tableEnemiesList;
 
 stop
 
