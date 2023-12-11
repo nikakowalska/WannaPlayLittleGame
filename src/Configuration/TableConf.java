@@ -17,12 +17,12 @@ public class TableConf {
     public List<StandardCard> throwCard() {
         List<StandardCard> p1Hand = new CardDeckConf().getDeck();
         List<StandardCard> p1Table = new ArrayList<>();
-
-//        for (int i = 1; i < p1Hand.size(); i++) {
-//            System.out.println(p1Hand.);
-//wybrac na podstawie id - for z if, 1 wyswietl karty, 2 podobnie jak z tym lead 123,get(int 1), add.p1table
-//        p1Hand.forEach(card -> System.out.println(card));
-//        int number = Integer.parseInt(scanner.nextLine());
-        return Collections.emptyList();
+        for (int i = 1; i < p1Hand.size() + 1; i++) {
+            System.out.println(i + " - " + p1Hand.get(i - 1).getName());
+            String playerChoose = scanner.nextLine();
+            StandardCard card = p1Hand.get(Integer.parseInt(playerChoose) - 1);
+            p1Table.add(card);
+        }
+        return p1Table;
     }
 }

@@ -2,6 +2,7 @@ package Gameplay;
 
 import Configuration.*;
 import Deck.Player1;
+import Exceptions.IncorrectUserSelectException;
 
 import java.util.Scanner;
 
@@ -23,8 +24,14 @@ public class Runner {
     }
 
     public boolean run() {
-
-        String playerChoose = menu.dispatcher();
+        String playerChoose;
+        try {
+            playerChoose = menu.dispatcher();
+        } catch (IncorrectUserSelectException ex) {
+            System.out.println(ex.getMessage());
+            System.out.println(ex.getErrorId());
+            return false;
+        }
         if (playerChoose.equals("N")) {
             return true;
         } else if (playerChoose.equals("A")) {
@@ -35,7 +42,7 @@ public class Runner {
             playerConf.getTL();
             CardDeckConf cardDeckConf = new CardDeckConf();
             Player1 player1 = new Player1(playerConf.getTL(), cardDeckConf.getDeck(), null, 0);
-            playerConf.showTL();
+            //playerConf.showTL();
             //playerBuilder.showHand();
             return false;
         } else if (playerChoose.equals("C")) {
@@ -43,7 +50,6 @@ public class Runner {
             System.out.println(cardDeckConf.getDeck().toString());
         }
         return false;
-
     }
 }
 

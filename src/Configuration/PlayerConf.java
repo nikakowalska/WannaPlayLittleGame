@@ -25,21 +25,20 @@ public class PlayerConf {
 
     CardDeckConf cardDeckConf = new CardDeckConf();
 
-    StandardCardConf standardCardBuilder = new StandardCardConf();
-    List<StandardCard> standardCards = standardCardBuilder.getStandardCardList();
-    BossEnemyConf enemyBuilder = new BossEnemyConf();
-    List<BossEnemy> bossEnemies = enemyBuilder.getBossEnemyList();
-    Player1 player1 = new Player1(getTL(), cardDeckConf.getDeck(), null, 0);
-
-    public void showTL() {
-        System.out.println(player1.getTeamLeader().toString());
-    }
-
-    public void showHand() {
-
-        //  System.out.println(player1.getTeamLeader().getName());
-        //  System.out.println(cardDeckBuilder.getDeck().toString());
+    StandardCardConf standardCardConf = new StandardCardConf();
+    List<StandardCard> standardCards = standardCardConf.getStandardCardList();
+    BossEnemyConf bossEnemyConf = new BossEnemyConf();
+    List<BossEnemy> bossEnemies = bossEnemyConf.getBossEnemyList();
 
 
-    }
+//    public void showTL(Player1 player1) {
+//        System.out.println(player1.getTeamLeader().toString());
+//    } stworzyc oddzielna klase w ktorej jest kooperacja z klasa player, klasa do wyswietlania
+
+//    public void showHand() { klasa playerUtils
+//
+//        //  System.out.println(player1.getTeamLeader().getName());
+//        //  System.out.println(cardDeckConf.getDeck().toString());
+
+ //   }
 }
