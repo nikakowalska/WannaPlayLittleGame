@@ -1,7 +1,9 @@
 package Configuration;
 
+import Builders.TeamLeaderBuilder;
 import Deck.Elements;
 import Deck.TeamLeader;
+import Utils.FileReader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,18 +17,15 @@ public class TeamLeadersConf {
 
     public TeamLeadersConf() {
         this.teamLeaderList = new ArrayList<>();
-        teamLeaderList.add(new TeamLeader("lead1", "HardCandy", Elements.FIRE, false));
-        teamLeaderList.add(new TeamLeader("lead2", "ChilliChips", Elements.LIGHTNING, false));
-        teamLeaderList.add(new TeamLeader("lead3", "Marshmallow", Elements.WIND, false));
-        teamLeaderList.add(new TeamLeader("lead4", "HotSausage", Elements.FIRE, false));
-        teamLeaderList.add(new TeamLeader("lead5", "Sweet&Sour", Elements.WATER, false));
-        teamLeaderList.add(new TeamLeader("lead6", "YourMomsDinner", Elements.FIRE, false));
+        FileReader fileReader = new FileReader();
+        fileReader.readFile("TeamLeadersList.csv", this.teamLeaderList);
+      //  TeamLeader teamLeader = new TeamLeaderBuilder().withId("lead7").withName("PowerPerfume").withBoostElement(Elements.WIND).withExtraThrow(false).build();
 
     }
 
     @Override
     public String toString() {
-        return "TeamLeadersBuilder{" +
+        return "TeamLeadersConf{" +
                 "teamLeaderList=" + teamLeaderList +
                 '}';
     }

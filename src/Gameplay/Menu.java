@@ -1,6 +1,8 @@
 package Gameplay;
 
-import Exceptions.IncorrectUserSelectException;
+
+
+import Utils.Strings;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,13 +23,13 @@ public class Menu {
 
     public String dispatcher() {
         String result;
-        System.out.println("Do you want to play? Y/N");
+        Strings.println("Do you want to play? Y/N", Strings.Color.GREEN_BACKGROUND);
         for (Map.Entry<String, String> entry : menuOptions.entrySet()) {
             System.out.println(entry.getKey()+". "+entry.getValue());
         }
         result = scanner.nextLine().toUpperCase();
         if (userSelectIncorrectOption(result)){
-            throw new IncorrectUserSelectException("123","User selected incorrect option");
+           // throw new IncorrectUserSelectException("123","User selected incorrect option");
         }
         return result;
     }
