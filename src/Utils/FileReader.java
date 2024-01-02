@@ -26,7 +26,7 @@ public class FileReader {
             while ((line = bufferedReader.readLine())!=null){
                 String [] splitLine = line.split(";");
             //    Strings.println(splitLine[0], Strings.Color.BLUE);
-                teamLeaderList.add(new TeamLeader("lead1", "HardCandy", Elements.FIRE, false));//splitline, przerobic na boolean
+             //splitline, przerobic na boolean
            //wykorzystac builder do team leader with with i wrzucic do teamLeaderList
             }
         } catch (IOException e) {

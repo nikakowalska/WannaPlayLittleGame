@@ -19,8 +19,6 @@ public class Runner {
         this.playerConf = new PlayerConf(this.scanner);
         this.tableConf = new TableConf(this.scanner);
 
-        //zrobic mind mape jak lacza sie klasy
-
     }
 
     public boolean run() {

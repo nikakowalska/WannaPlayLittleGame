@@ -1,5 +1,7 @@
 package Builders;
+
 import Deck.BossEnemy;
+
 public class BossEnemyBuilder {
     private String id;
     private String name;
