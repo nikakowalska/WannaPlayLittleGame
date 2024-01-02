@@ -39,7 +39,7 @@ public class Runner {
             PlayerConf playerConf = new PlayerConf(scanner);
             playerConf.getTL();
             CardDeckConf cardDeckConf = new CardDeckConf();
-            Player1 player1 = new Player1(playerConf.getTL(), cardDeckConf.getDeck(), null, 0);
+            //Player1 player1 = new Player1(playerConf.getTL(), cardDeckConf.getDeck(), null, 0);
             //playerConf.showTL();
             //playerBuilder.showHand();
             return false;

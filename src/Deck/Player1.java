@@ -13,9 +13,6 @@ public class Player1 {
     private List<StandardCard> table;
     private int scoreValue;
 
-//ma do wyboru jedna z 2 akcji dobierz, zaatakuj i wyloz na stol. w kazdej rundzie(licznik runda 1) decydowac ktora akcje chce zrobic,
-    //losowo dobierz karte, wyloz karte na stol, gdy mam wystarczajaco punktow akcji atakuje przypadkowego bosa
-
 
     public TeamLeader getTeamLeader() {
         return teamLeader;
@@ -34,7 +31,7 @@ public class Player1 {
 
     public void setScoreValue(final int scoreValue) {
         int currentValue = this.scoreValue;
-        this.scoreValue = currentValue+scoreValue;
+        this.scoreValue = currentValue + scoreValue;
         //ctrlw zaznacza
     }
 

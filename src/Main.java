@@ -11,18 +11,19 @@ public class Main {
         //run wykorzystuje sie w aplikacjach wielowatkowych - zobacz watki
 
 
-//        for (; ; ) {
-//            if (runner.run()) {
-//                //    continue;//dobre by wyjsc z duzego zagniezdzenia ifow, stary kod i ma zaszlosci, zrobili spaghetti
-//                break;
-//                //ponizej 20 jest goto
-//
-//            }
-//
-//        }
+        for (; ; ) {
+            if (runner.run()) {
+                //    continue;//dobre by wyjsc z duzego zagniezdzenia ifow, stary kod i ma zaszlosci, zrobili spaghetti
+                break;
+                //ponizej 20 jest goto
+
+            }
+
+        }
 
         scanner.close();
     }
+
 }
 
 

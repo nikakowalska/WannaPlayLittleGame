@@ -17,9 +17,10 @@ public class TeamLeadersConf {
 
     public TeamLeadersConf() {
         this.teamLeaderList = new ArrayList<>();
+
         FileReader fileReader = new FileReader();
         fileReader.readFile("TeamLeadersList.csv", this.teamLeaderList);
-      //  TeamLeader teamLeader = new TeamLeaderBuilder().withId("lead7").withName("PowerPerfume").withBoostElement(Elements.WIND).withExtraThrow(false).build();
+        TeamLeader teamLeader = new TeamLeaderBuilder().withId("lead7").withName("PowerPerfume").withBoostElement(Elements.WIND).withExtraThrow(false).build();
 
     }
 
